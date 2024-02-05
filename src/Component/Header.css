@@ -1,0 +1,164 @@
+:root {
+  --blackColor: #000;
+  --white: #fff;
+}
+.dark {
+  --darkCardColor: #373737;
+}
+.header {
+  background: rgb(41, 176, 182);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(41, 176, 182, 1) 0%,
+    rgba(0, 204, 153, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(41, 176, 182, 1) 0%,
+    rgba(0, 204, 153, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(41, 176, 182, 1) 0%,
+    rgba(0, 204, 153, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#29b0b6",endColorstr="#00cc99",GradientType=1);
+  padding: 0 10px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(5, 10% 75% 3% 5% 7%);
+  align-items: center;
+  text-transform: uppercase;
+}
+.header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.header ul li {
+  padding: 5px 25px;
+  cursor: pointer;
+}
+.header ul li.active {
+  background: rgba(93, 218, 224, 0.4);
+  border-radius: 20px;
+}
+.search-container {
+  -webkit-box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1;
+  position: relative;
+}
+.search-inner {
+  width: 1100px;
+  margin: 0 auto;
+}
+.search-inner form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.search-inner form select:focus {
+  outline: 0;
+}
+.search-inner form select {
+  font-size: 28px;
+  font-weight: 600;
+  padding: 12px;
+  color: RGB(0, 0, 0);
+  border: 0;
+  border-bottom: 1px solid #00cc99;
+  width: 100%;
+}
+.search-btn {
+  width: 100%;
+  font-size: 18px;
+  align-self: normal;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00cc99;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.search-btn:hover {
+  background: rgb(41, 176, 182);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(41, 176, 182, 1) 0%,
+    rgba(0, 204, 153, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(41, 176, 182, 1) 0%,
+    rgba(0, 204, 153, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(41, 176, 182, 1) 0%,
+    rgba(0, 204, 153, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#29b0b6",endColorstr="#00cc99",GradientType=1);
+  color: #fff;
+}
+.switch-input img {
+  transform: rotate(360deg);
+  transition: ease-in-out 0.2s all;
+  cursor: pointer;
+}
+.active img {
+  transform: rotate(180deg);
+  transition: ease-in-out 0.2s all;
+  cursor: pointer;
+}
+option {
+  font-size: 14px;
+}
+.card {
+  -webkit-box-shadow: 0 0 4px 0 RGBA(126, 151, 179, 0.5);
+  box-shadow: 0 0 4px 0 RGBA(126, 151, 179, 0.5);
+  -webkit-box-shadow: 0 0 4px 0 #ccc;
+  box-shadow: 0 0 4px 0 #ccc;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 25% 50% 25%);
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.dark {
+  background: #1f1f1f;
+  color: #fff;
+}
+.border {
+  border-top: 1px dashed #000;
+}
+.dark .border {
+  border-color: #fff;
+}
+.dark .search-container,
+.dark .card {
+  background: var(--darkCardColor);
+}
+.dark .search-inner form select {
+  background: transparent;
+  color: #fff;
+}
+.dark .search-inner img {
+  background: white;
+  opacity: 0.6;
+  border-radius: 100%;
+}
+.dark .search-btn {
+  color: #fff;
+}
+.dark option {
+  color: #000;
+}
