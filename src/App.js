@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import Header from "./Component/Header";
 import data from "./API/api-data.json";
 import Card from "./Component/Card";
+console.log("data", data);
 
 function App() {
   const [themeColor, setThemeColor] = useState();
   const [loadingData, setLoadingData] = useState();
   const [fligths, setFlights] = useState();
   const [array1, setArray1] = useState([]);
+  const [active, setActive] = useState(false);
   const data2 = data[0].data[0].flights[0].results.j;
   const theme = (data) => {
     setThemeColor(data);
@@ -60,14 +62,22 @@ function App() {
             flexDirection: "column",
           }}
         >
-          <div style={{ display: "flex", gap: "10px" }}>
-            <button onClick={lowPrice} className="search-btn button">
-              Low Price
-            </button>
-            <button onClick={highPrice} className="search-btn button">
-              High Price
-            </button>
-          </div>
+          {fligths?.length > 0 && (
+            <div style={{ display: "flex", gap: "10px" }}>
+              <button
+                onClick={lowPrice}
+                className={active ? "active" : "search-btn button"}
+              >
+                Low Price
+              </button>
+              <button
+                onClick={highPrice}
+                className={active ? "active" : "search-btn button"}
+              >
+                High Price
+              </button>
+            </div>
+          )}
           {loadingData ? (
             <div
               style={{

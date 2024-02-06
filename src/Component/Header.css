@@ -157,7 +157,7 @@ option {
   background: transparent;
   color: #fff;
 }
-.dark .search-inner img {
+.dark .search-inner svg {
   background: white;
   opacity: 0.6;
   border-radius: 100%;
