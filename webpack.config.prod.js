@@ -40,7 +40,7 @@ module.exports = {
       ],
     }),
     new ModuleFederationPlugin({
-      name: "apgh",
+      name: "aertrip",
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {},

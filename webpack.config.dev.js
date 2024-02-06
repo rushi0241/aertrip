@@ -35,7 +35,7 @@ module.exports = {
       shared: ["react"],
     }),
     new ModuleFederationPlugin({
-      name: "apgh",
+      name: "aertrip",
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {},
