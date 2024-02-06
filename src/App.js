@@ -22,7 +22,18 @@ function App() {
     });
     setFlights(b);
   }
-
+  const highPrice = () => {
+    const flightMap = fligths
+      .map((item) => item)
+      .sort((a, b) => b.farepr - a.farepr);
+    setFlights(flightMap);
+  };
+  const lowPrice = () => {
+    const flightMap = fligths
+      .map((item) => item)
+      .sort((a, b) => a.farepr - b.farepr);
+    setFlights(flightMap);
+  };
   useEffect(() => {
     checkfileter(array1);
   }, [array1, data2]);
@@ -46,8 +57,17 @@ function App() {
             rowGap: "15px",
             padding: "15px 0",
             flexWrap: "wrap",
+            flexDirection: "column",
           }}
         >
+          <div style={{ display: "flex", gap: "10px" }}>
+            <button onClick={lowPrice} className="search-btn button">
+              Low Price
+            </button>
+            <button onClick={highPrice} className="search-btn button">
+              High Price
+            </button>
+          </div>
           {loadingData ? (
             <div
               style={{
@@ -62,19 +82,24 @@ function App() {
             </div>
           ) : fligths?.length > 0 ? (
             fligths.map((item, index) => {
-              return <Card data={item} />;
+              return (
+                <>
+                  <Card data={item} />
+                </>
+              );
             })
           ) : (
             <div
               style={{
                 fontWeight: "bold",
-                justifyContent: "center",
-                alignItems: "center",
+                flexDirection: "column",
                 display: "flex",
                 height: "100%",
+                flexWrap: "wrap",
+                gap: "20px",
               }}
             >
-              Data Not Found
+              <div>Data Not Found</div>
             </div>
           )}
         </div>

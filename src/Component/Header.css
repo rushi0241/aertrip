@@ -74,7 +74,8 @@
   border-bottom: 1px solid #00cc99;
   width: 100%;
 }
-.search-btn {
+.search-btn,
+.button {
   width: 100%;
   font-size: 18px;
   align-self: normal;
@@ -84,6 +85,11 @@
   background: transparent;
   border-radius: 10px;
   cursor: pointer;
+}
+.button {
+  width: auto;
+  padding: 5px 15px;
+  font-size: 14px;
 }
 .search-btn:hover {
   background: rgb(41, 176, 182);

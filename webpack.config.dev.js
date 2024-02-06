@@ -32,7 +32,6 @@ module.exports = {
       inject: true,
       template: path.resolve(__dirname, "public", "index.html"),
       favicon: "./public/favicon.ico",
-      shared: ["react"],
     }),
     new ModuleFederationPlugin({
       name: "aertrip",
@@ -52,14 +51,6 @@ module.exports = {
         "react-redux": {
           singleton: true,
           requiredVersion: deps["react-redux"],
-        },
-        lai_webui: {
-          singleton: true,
-          requiredVersion: deps.lai_webui,
-        },
-        lai_global: {
-          singleton: true,
-          requiredVersion: deps.lai_global,
         },
       },
     }),

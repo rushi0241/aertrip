@@ -58,14 +58,6 @@ module.exports = {
           singleton: true,
           requiredVersion: deps["react-redux"],
         },
-        lai_webui: {
-          singleton: true,
-          requiredVersion: deps.lai_webui,
-        },
-        lai_global: {
-          singleton: true,
-          requiredVersion: deps.lai_global,
-        },
       },
     }),
     new ExternalTemplateRemotesPlugin(),
