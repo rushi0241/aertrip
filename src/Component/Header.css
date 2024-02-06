@@ -105,12 +105,12 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#29b0b6",endColorstr="#00cc99",GradientType=1);
   color: #fff;
 }
-.switch-input img {
+.switch-input svg {
   transform: rotate(360deg);
   transition: ease-in-out 0.2s all;
   cursor: pointer;
 }
-.active img {
+.active svg {
   transform: rotate(180deg);
   transition: ease-in-out 0.2s all;
   cursor: pointer;

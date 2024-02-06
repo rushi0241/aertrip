@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Component/Header";
 import data from "./API/api-data.json";
 import Card from "./Component/Card";
